@@ -14,9 +14,9 @@ class UsersController extends Controller
   public function afficherAdmin()
   {
 
-    $users = auth()->user();
+    $users_admin = User::all();
     return view('users_admin', [
-    'users' => $users, 
+    'users' => $users_admin, 
     ]);
 
   }

@@ -24,14 +24,14 @@
     @endforeach
     
 </table>
-    <form action="updateAdmin" method="POST">
+    <form action="updateMember" method="POST">
         @csrf
         <input type="text" name="id" placeholder="id de la compétence"><br><br>
         <input type="text" name="level" placeholder="Niveau entre 1 et 5 "><br><br>
         <button type="submit"> Modifier </button>
         </form>
         <br>
-    <form action="deleteAdmin" method="POST">
+    <form action="deleteMember" method="POST">
         @csrf
         <input type="text" name="id" placeholder="id de la compétence"><br><br>
         <button type="submit"> Supprimer </button>

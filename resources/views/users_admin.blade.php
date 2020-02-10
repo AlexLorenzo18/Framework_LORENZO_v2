@@ -10,23 +10,20 @@
 <h1> Utilisateurs </h1>
 
 <table>
+
   <tr>
-      <th>id</th> 
-      <th>name</th>
-      <th>email</th>
-      <th>skills</th>
-      <th>level</th>
-  </tr>
-  
-  <tr>
-      <td> {{ $users -> id }} </td>
-      <td> {{ $users -> name }} </td>
-      <td> {{ $users -> email }} </td>
-  
-    @foreach ($users->competences as $competence)
-      <td> {{ $competence -> name }} </td>
-      <td> {{ $competence->pivot -> level }}  </td>
-    @endforeach
+  @foreach ($users as $users)
+  <ul>
+      <li> {{ $users -> id }} </li>
+      <li> {{ $users -> name }} </li>
+      <li> {{ $users -> email }} <li>
+  @foreach ($users->competences as $competence)
+      <li> {{ $competence -> name }} </li>
+      <li> {{ $competence->pivot -> level }}</li>
+      
+  @endforeach
+  </ul>
+   @endforeach
       <br>
   </tr>
  
